@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const sections = [
   {
-    image: '/image/picture-1.jpg',
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-1.jpg',
     title: 'Erasmus. November.',
     text: `I saw you and thought:
 "Wow… she’s beautiful."
@@ -15,21 +15,21 @@ And then I thought:
 "Yeah… no chance, she’s unreachable."`,
   },
   {
-    image: '/image/picture-2.jpg',
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-2.jpg',
     title: 'Plot twist 😌',
     text: `Turns out… you already had a crush on me.
 I was shocked.
 Still processing it to this day.`,
   },
   {
-    image: '/image/picture-3.jpg',
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-3.jpg',
     title: 'The shy phase',
     text: `You were singing, dancing, leading people.
 I was watching from distance like:
 "Okay… I’ll just breathe and survive."`,
   },
   {
-    image: '/image/picture-4.jpg',
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-4.jpg',
     title: 'Dining room moment',
     text: `Somehow we started talking.
 Your eyes were shining.
@@ -37,7 +37,7 @@ The whole world stopped.
 It was only you.`,
   },
   {
-    image: '/image/picture-5.jpg',
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-5.jpg',
     title: 'Internal drama 🎭',
     text: `There was that Greek guy.
 I thought:
@@ -46,7 +46,7 @@ But my heart said:
 "Nope. She’s mine."`,
   },
   {
-    image: '/image/picture-6.JPG',
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-6.JPG',
     title: 'The first kiss',
     text: `A bit drunk.
 Outside.
@@ -57,6 +57,7 @@ You came closer.
 And my mind went completely silent.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-7.jpg',
     title: 'Musical Park',
     text: `Sober.
 Just you and me.
@@ -68,6 +69,7 @@ and kissed you.
 Butterflies everywhere.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-7-5.jpg',
     title: 'Distance begins ✈️',
     text: `"What will we do?"
 "We continue."
@@ -75,12 +77,14 @@ You didn’t fully believe me.
 But we did.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-8.jpeg',
     title: 'Girl Math 🧮',
     text: `14 days = 2 weeks
 15 days = 2 weeks + 1 day
 Science confirmed.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-9.jpeg',
     title: '6-hour calls',
     text: `Every day.
 Video calls.
@@ -90,6 +94,7 @@ Stranger Things.
 Together, even apart.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-10.jpeg',
     title: 'Seeing you again',
     text: `You were real.
 Not a screen.
@@ -97,6 +102,7 @@ I couldn’t believe my eyes.
 One week of pure happiness.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-11.jpg',
     title: 'Us',
     text: `Cooking.
 Walking.
@@ -105,6 +111,7 @@ Loving.
 Every moment mattered.`,
   },
   {
+    image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-12.jpeg',
   title: 'Christmas & New Year 🎄',
   text: `There’s a saying:
 “How you spend New Year’s Eve —
@@ -119,6 +126,7 @@ I want to spend the next one with you.
 And the one after that too.`,
 },
 {
+  image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-13.jpeg',
   title: 'You and your big heart 🎁',
   text: `We were together,
 preparing gifts for everyone.
@@ -136,13 +144,13 @@ That really impressed me.`,
 },
 
 {
+  image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-14.jpeg',
   title: 'That moment',
   text: `Even though we were together,
 I felt like we didn’t really have time just for us.
 
 I tried to keep it inside.
 But I couldn’t.
-And yeah… I cried.
 
 In front of you.
 
@@ -153,6 +161,7 @@ Like I could finally breathe.`,
 },
 
 {
+  image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-15.jpeg',
   title: 'My safe place 🏠',
   text: `With you,
 I don’t need to pretend.
@@ -168,6 +177,7 @@ And you are the one thing
 I never want to lose.`,
 },
 {
+  image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-16.jpeg',
   title: 'Only for you 🔒',
   text: 'Touch and hold',
 },
