@@ -238,7 +238,7 @@ export default function Home() {
   };
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
-      <AnimatedBackground/>
+      {/* <AnimatedBackground/> */}
       <div className='relative z-20'>
          {/* HERO */}
       <section className="h-screen z-30 flex flex-col justify-center items-center text-center px-6">
