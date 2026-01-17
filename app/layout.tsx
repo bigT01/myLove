@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "For my love ❤️",
+  title: "For my hogis ❤️",
   description: "Bithrday gift and letter for my long-distance girlfriend.",
 };
 

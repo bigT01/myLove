@@ -177,6 +177,36 @@ And you are the one thing
 I never want to lose.`,
 },
 {
+  image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-17.jpeg',
+  title: 'This story is about you',
+  text: `Everything you read here
+is our story —
+but told from my point of view.
+
+I chose storytelling
+because it’s the best way I know
+to show who you really are.
+
+Through moments.
+Through actions.
+Through the way you care.
+
+You are kind.
+You are warm.
+You think about others.
+You love deeply,
+even when it’s not easy.
+
+And if I have one wish,
+it’s this:
+
+That you always stay yourself.
+That you never forget
+how special you are.
+And that I get to keep
+writing stories with you.`,
+},
+{
   image: 'https://x7eoz2niieu08urz.public.blob.vercel-storage.com/picture-16.jpeg',
   title: 'Only for you 🔒',
   text: 'Touch and hold',
