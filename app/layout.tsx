@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "For my hogis ❤️",
-  description: "Bithrday gift and letter for my long-distance girlfriend.",
+  title: 'Happy Birthday ❤️',
+  description: 'A small story, from my point of view.',
+  openGraph: {
+    title: 'Happy Birthday ❤️',
+    description: 'A small story, from my point of view.',
+    url: 'https://my-love-six-omega.vercel.app/',
+    siteName: 'Only for you',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
