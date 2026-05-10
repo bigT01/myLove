@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from "react";
 import AnimatedBackground from './component/AnimatedBackground';
 import Image from 'next/image';
@@ -213,7 +213,7 @@ writing stories with you.`,
 },
 ];
 
-export default function Home() {
+function BirthdayStory() {
   const [daysLeft, setDaysLeft] = useState<number>(0);
   const [isUnlocked, setIsUnlocked] = useState(false);
   let holdTimer: NodeJS.Timeout;
@@ -237,11 +237,10 @@ export default function Home() {
     clearTimeout(holdTimer);
   };
   return (
-    <main className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* <AnimatedBackground/> */}
+    <div className="relative pt-20">
       <div className='relative z-20'>
          {/* HERO */}
-      <section className="h-screen z-30 flex flex-col justify-center items-center text-center px-6">
+      <section className="h-[80vh] z-30 flex flex-col justify-center items-center text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -392,7 +391,144 @@ export default function Home() {
         </p>
       </section>
       </div>
-      
+    </div>
+  );
+}
+
+function SixMonthsAnniversary() {
+  return (
+    <div className="relative min-h-screen flex flex-col items-center justify-center pt-24 px-6 pb-20 overflow-hidden">
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-4xl md:text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 z-10"
+      >
+        Happy 6 Months, My Love 🥂
+      </motion.h1>
+
+      <motion.p 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="text-lg text-white/80 max-w-2xl text-center mb-12 z-10"
+      >
+        Half a year of us. Half a year of the best days of my life. 
+        I made this little video to remind you how much you mean to me.
+      </motion.p>
+
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="relative w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(255,105,180,0.3)] border border-white/20 bg-white/5 backdrop-blur-sm z-10"
+      >
+        <video 
+          src="https://x7eoz2niieu08urz.public.blob.vercel-storage.com/love.mp4" 
+          controls 
+          className="w-full h-full object-cover rounded-3xl"
+          playsInline
+          preload="metadata"
+        />
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="mt-16 text-center space-y-4 z-10"
+      >
+        <p className="text-xl font-medium text-pink-200">
+          And this is just the beginning... ❤️
+        </p>
+        <div className="flex justify-center gap-2 text-2xl">
+          <motion.span animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>✨</motion.span>
+          <motion.span animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.2 }}>💖</motion.span>
+          <motion.span animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.4 }}>🌟</motion.span>
+        </div>
+      </motion.div>
+
+      {/* Floating background hearts */}
+      {[...Array(15)].map((_, i) => (
+        <motion.div
+          key={`heart-${i}`}
+          initial={{
+            y: "100vh",
+            x: Math.random() * 100 - 50 + "vw",
+            opacity: 0,
+            scale: Math.random() * 0.5 + 0.5,
+          }}
+          animate={{
+            y: "-10vh",
+            opacity: [0, 1, 0],
+            rotate: Math.random() * 360,
+          }}
+          transition={{
+            duration: 10 + Math.random() * 10,
+            repeat: Infinity,
+            delay: Math.random() * 10,
+            ease: "linear",
+          }}
+          className="absolute text-pink-500/30 text-2xl z-0 pointer-events-none"
+        >
+          ❤️
+        </motion.div>
+      ))}
+    </div>
+  )
+}
+
+export default function Home() {
+  const [activeTab, setActiveTab] = useState<'birthday' | '6months'>('6months');
+
+  return (
+    <main className="relative min-h-screen bg-black text-white overflow-hidden">
+      {/* Tab Navigation */}
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/10 backdrop-blur-md rounded-full p-1.5 flex gap-1 border border-white/20 shadow-2xl">
+        <button
+          onClick={() => setActiveTab('birthday')}
+          className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            activeTab === 'birthday' ? 'bg-white text-black shadow-lg scale-105' : 'text-white/70 hover:text-white hover:bg-white/10'
+          }`}
+        >
+          Birthday Story
+        </button>
+        <button
+          onClick={() => setActiveTab('6months')}
+          className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            activeTab === '6months' ? 'bg-white text-black shadow-lg scale-105' : 'text-white/70 hover:text-white hover:bg-white/10'
+          }`}
+        >
+          6 Months 🥂
+        </button>
+      </nav>
+
+      {/* Content */}
+      <AnimatePresence mode="wait">
+        {activeTab === 'birthday' ? (
+          <motion.div 
+            key="birthday" 
+            initial={{ opacity: 0, x: -20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.3 }}
+            className="w-full min-h-screen"
+          >
+             <BirthdayStory />
+          </motion.div>
+        ) : (
+          <motion.div 
+            key="6months" 
+            initial={{ opacity: 0, x: 20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+            className="w-full min-h-screen"
+          >
+             <SixMonthsAnniversary />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
